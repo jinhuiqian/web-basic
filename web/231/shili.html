@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>校园网综合实例</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style>
+			* {
+				font-size: 14px;
+				margin: 0;
+				padding: 0;
+				border: none;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			header {
+				position: relative;
+				height: 80px;
+				background: #4685c6;
+			}
+			
+			#container {
+				position: relative;
+				/*定位方式，相对定位*/
+				z-index: 1;
+				width: 1200px;
+				margin: 0 auto;
+			}
+			
+			header>div#container>a {
+				display: block;
+				float: left;
+				margin: 15px 25px;
+			}
+			
+			#headerbottom {
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				width: 100%;
+				height: 7px;
+				background: #d6d6d6;
+			}
+			
+			header>div#container>nav {
+				float: right;
+			}
+			
+			nav>a {
+				font-size: 16px;
+				font-family: 微软雅黑;
+				line-height: 73px;
+				display: block;
+				float: left;
+				width: 110px;
+				height: 73px;
+				text-align: center;
+				color: #000000;
+			}
+			
+			nav>a:nth-child(1) {
+				background: #8c8f90;
+			}
+			
+			nav>a:nth-child(2) {
+				background: #017fcb;
+			}
+			
+			nav>a:nth-child(3) {
+				background: #55aaff;
+			}
+			
+			nav>a:nth-child(4) {
+				background: #97d7fe;
+			}
+			
+			nav>a:nth-child(5) {
+				background: #b2edf2;
+			}
+			
+			nav>a:nth-child(6) {
+				background: #a6b8d4;
+			}
+			
+			
+			nav>a:hover {
+				padding-bottom: 7px;
+			}
+			
+			#banner {
+				height: 300px;
+				background-color: #eaeaea;
+				background-image: url(images/banner/banner1.jpg),url(images/banner/banner2.jpg),url(images/banner/banner3.jpg);
+				background-repeat: no-repeat;
+				background-position: center,10% 50%,90% 50%;
+				 background-size: 1000px,800px,800px;
+			}
+			
+			.main { position: relative; width: 1200px; height: 473px; margin: 34px auto 0; }
+			.main h1 { font-size: 30px; font-family:微软雅黑; font-weight: lighter; margin-bottom: 23px; }
+			.main h1 > samp { font-size: 20px; font-family:微软雅黑; color: #7c7c7c; }
+			.main > aside { float: left; width: 450px; }
+			.main > aside > dl { position: relative; display: block; height: 74px; margin-bottom: 17px; }
+			.main > aside > dl > dt { position: absolute; top: -1px; left: 92px; font-size: 16px; font-weight: bold; line-height: 16px; text-decoration: underline; }
+			.main > aside > dl > dd:first-of-type { position: absolute; left: 0; }
+			.main > aside > dl > dd:last-of-type { position: absolute; top: 20px; left: 90px; line-height:150%; }
+			
+			.main > article { float: right; width: 720px; overflow: hidden; }
+			.main > article > p { margin-bottom: 15px; line-height:150%; text-indent:2em; }
+			.main > article > img { margin-bottom: 15px; border:1px solid #CCC;}
+			
+			#login{
+				width: 308px;
+				height: 200px;
+				margin: 50px auto 0;
+				background-color: #4685C6;
+				border-radius: 20px;
+			}
+			
+			#login1{
+				height: 24px;
+				margin-left: 15px;
+				margin-top: 13px;
+				background:url(../images/pos.png) no-repeat left;
+			}
+			
+			#login2{
+				font-size: 16px;
+				color: darkblue;
+				line-height: 24px;
+				margin-left: 30px;
+			}
+			#list1{
+				height: 24px;
+				margin-top: 15px;
+				margin-left: 30px;
+			}
+			
+			#ipt1{
+				border: 1px solid #00aaff;
+				padding-left: 25px;
+				background: #fff url(../images/login.png) no-repeat;
+				background-position: 5px -15px !important;
+			}
+			
+			#ipt2{
+				border: 1px solid #00aaff;
+				padding-left: 25px;
+				background: #fff url(../images/login.png) no-repeat;
+				background-position: 5px -67px !important;
+			}
+			
+			#user{color: #000000;}
+			
+			#list2{
+				height: 32px;
+				margin: 15px 0 0 30px;
+			}
+			
+			#password a{
+				color: darkkhaki;
+			}
+			
+			#password a:hover{
+				color: #00aaff;
+			}
+			
+			/* footer */
+			footer {position: relative; background: #4685c6; }
+			footer:before { position: absolute; z-index: -1; top: -6px; left: 0; width: 100%; height: 6px; content: ''; background: #d6d6d6; }
+			footer > .container { width: 1200px; height: 64px; margin: 0 auto; }
+			footer > .container > p { line-height: 64px; float: left; color: #fff; }
+			footer > .container > span { float: right; margin: 14px 40px; }
+			footer > .container > span > img { margin-left: 4px; opacity: 0.7; }
+			footer > .container > span > img:hover { opacity: 1; cursor: progress; }
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<div id="container">
+				<a href="index.html"><img src="images/logo.png"></a>
+				<nav>
+					<a href="mhsy.html">门户首页</a>
+					<a href="xxgk.html">学校概况</a>
+					<a href="zzjg.html">组织机构</a>
+					<a href="zsjy.html">招生就业</a>
+					<a href="login.html">科学研究</a>
+				</nav>
+			</div>
+			<div id="headerbottom"></div>
+		</header>
+		<section id="banner"></section>
+		<div id="login">
+			<form action="#">
+				<div id="login1"><span id="login2">用户登录</span></div>
+				<div id="list1">
+					<span id="user">用户名:</span>
+					<input type="text" id="ipt1" placeholder="请输入用户名" required="required" />
+				</div>
+				<div id="list1">
+					<span id="user">密&nbsp;&nbsp;&nbsp;码:</span>
+					<input type="password" id="ipt2" placeholder="请输入密码" required="required" />
+				</div>
+				<div id="list2" align="center">
+					<input type="image" src="images/dl.png">
+					<span id="password"> <a href="#">&nbsp;&nbsp;&nbsp;忘记密码？</a></span>
+				</div>
+			</form>
+		</div>
+		
+		<section class="main">
+			<aside>
+				<h1>公告通知<span>招标信息</span></h1>
+				<dl>
+					<dt>教育装备产业集群信息服务平台招标公告</dt>
+					<dd><img src="images/Course/05_05.png"></dd>
+					<dd>计算机学院对教育装备产业集群信息服务平台项目进行公开招标，欢迎符合条件的投标.项目名称及编号: 教育装备产业集群信息服务平台（ITZ2017-131）</dd>
+				</dl>
+				<dl>
+					<dt>青年教师周转公寓栏杆采购招标公告</dt>
+					<dd><img src="images/Course/06_04.png"></dd>
+					<dd>学院青年教师周转公寓栏杆采购项目进行公开招标，欢迎符合条件的投标人参加投标.</dd>
+				</dl>
+				<dl>
+					<dt>教育装备产业集群信息服务平台招标公告</dt>
+					<dd><img src="images/Course/09_07.png"></dd>
+					<dd>计算机学院对教育装备产业集群信息服务平台项目进行公开招标，欢迎符合条件的投.项目名称及编号: 教育装备产业集群信息服务平台（ITZ2017-131）</dd>
+				</dl>
+				<dl>
+					<dt>青年教师周转公寓栏杆采购招标公告</dt>
+					<dd><img src="images/Course/02_09.png"></dd>
+					<dd>学院青年教师周转公寓栏杆采购项目进行公开招标，欢迎符合条件的投标人参加投标.</dd>
+				</dl>
+			</aside>
+			<article>
+				<h1>学院介绍<span>学院详情</span></h1>
+				<p>学校占地1000亩，坐落在风景秀美、充满人文底蕴和现代气息。集教学、科研、培训、职业技能鉴定和社会服务于一体的高教园区，校园规划科学，设计精致，环境优雅，景致宜人、交通便捷。</p>
+				<img src="images/article.jpg">
+				<p>学校师资结构合理,素质优良。现有教职工600余人，其中专任教师400多名，专任教师中高级职称教师占30%、具有硕士以上学位64%；专业课教师中具有“双师”素质的教师占86%...</p>
+				<p>学校坚持以服务为宗旨，以就业为导向，走产学研结合的道路，建有校内实验实训室184个...</p>
+			</article>
+		</section>
+		<footer>
+			<div class="container">
+				<p>Copyright &copy;2017 All Rights Reserved.</p>
+				<span>
+					<img src="images/icon/weichat.png" />
+					<img src="./images/icon/sina.png">
+					<img src="images/icon/qq.png">
+				</span>
+			</div>
+		</footer>
+	</body>
+</html>

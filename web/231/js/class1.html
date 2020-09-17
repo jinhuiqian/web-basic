@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>门户网站导航设计</title>
+		<style type="text/css">
+			* {                         /* 设置页面通用样式 */
+				font-size: 14px;          /* 设置字号大小 */
+				margin: 0;              /* 设置所有外边距为 0像素 */
+				padding: 0;             /* 设置所有内边距为 0像素 */
+				border: none;           /* 设置所有元素无边框 */
+			    }
+			a {text-decoration: none; }     /* 设置页面a链接的通用样式 */
+			header {                     /*  header区域样式设置 */
+				position: relative;         /* 定位方式，相对定位 */
+				height: 80px;            /*  header高为80像素 */
+				background: #4685c6;     /* 设置背景颜色 */
+				}
+			#container {            /* 设置div容器的样式 */
+				position: relative;        /*定位方式，相对定位*/
+				z-index: 1;              /*设置z轴，屏幕纵深方向的层次顺序*/
+				width: 1200px;          /*设置宽度*/
+				margin: 0 auto;          /*设置div居中*/
+				}
+			header > div#container > a {       /* 设置第一个a标签的样式 */
+				display: block;          /* 转换a为块状显示 */
+				float: left;              /* 设置左漂浮 */
+				margin: 15px 25px;      /* 设置外边距 */
+				}
+			#headerbottom {       /* 设置div元素样式，实现底部灰色条 */
+				position: absolute;       /* 设置定位方式，绝对定位 */
+				bottom: 0px;           /* 设置伪元素bottom为0 */
+				left: 0px;              /* 设置伪元素left为0 */
+				width: 100%;           /* 设置宽度100% */
+				height: 7px;            /* 设置高度7像素 */
+				background: #d6d6d6;    /* 设置背景为灰色 */
+				}
+			header > div#container > nav {     /* 设置导航部分右漂浮 */
+				float: right; 
+				}
+			nav > a {                   /* 设置导航中a的样式 */
+				font-size: 16px;
+				font-family:微软雅黑;
+				line-height: 73px;
+				display: block;        /* 转换a为块状显示 */
+				float: left;            /* 设置左漂浮 */
+				width: 110px;
+				height: 73px;
+				text-align: center;
+				color: #fff;
+				}
+			nav > a:nth-child(1) { background: #433b90; }   /* 设置li子元素1的背景颜色 */
+			nav > a:nth-child(2) { background: #017fcb; }   /* 设置li子元素2的背景颜色 */
+			nav > a:nth-child(3) { background: #78b917; }   /* 设置li子元素3的背景颜色 */
+			nav > a:nth-child(4) { background: #feb800; }   /* 设置li子元素4的背景颜色 */
+			nav > a:nth-child(5) { background: #f27c01; }   /* 设置li子元素5的背景颜色 */
+			nav > a:nth-child(6) { background: #d40112; }   /* 设置li子元素6的背景颜色 */
+			
+			nav > a:hover {    /* 设置a的hover态与第1个a元素背景颜色 */
+			padding-bottom: 7px; 
+				}
+			}
+		</style>
+	<body>
+		<header>
+						<div id="container">
+					<a herf="index.html"><img src="../img/logo-css.png"></a>
+					<nav>
+					<a href="#">门户首页</a>
+					<a href="#">学校概况</a>
+					<a href="#">组织机构</a>
+					<a href="#">招生就业</a>
+					<a href="#">科学研究</a>
+					<a href="#">招聘信息</a>
+					</nav>
+					</div>
+					<div id="headerbottom"></div>
+					</header>
+	</body>
+<ml>
