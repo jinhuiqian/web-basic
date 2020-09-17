@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="userDao" class="com.itheima.ioc.UserDaolmpl" />
+
+    <!--添加一个 id 为 userService 的实例-->
+    <bean id="userService" class="com.itheima.ioc.UserServicelmpl">
+        <!--将 id 为 userDao 的 Bean 实例注入到 userService 实例中-->
+        <property name="userDao" ref="userDao" />
+    </bean>
+</beans>
